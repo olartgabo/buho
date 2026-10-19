@@ -1,0 +1,39 @@
+{
+  "name": "@buho/help",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server combining buhoVirtual (UPB Virtual / Moodle) and buhoSistemas (UPBnet past exams) for studying.",
+  "type": "module",
+  "bin": {
+    "buho-help": "dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/server.ts",
+    "dev:http": "tsx src/http.ts",
+    "start": "node dist/server.js",
+    "start:http": "node dist/http.js",
+    "tunnel": "cloudflared tunnel --url http://localhost:8787",
+    "inspect": "npx @mcpjam/inspector@latest"
+  },
+  "keywords": [
+    "mcp",
+    "upb",
+    "moodle",
+    "upbnet",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@buho/sistemas": "0.1.0",
+    "@buho/virtual": "0.1.0",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

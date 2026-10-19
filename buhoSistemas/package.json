@@ -1,0 +1,46 @@
+{
+  "name": "@buho/sistemas",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server for UPBnet (sistemas.upb.edu) — search, download and convert past exams from the UPB library.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "buho-sistemas": "dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/server.ts",
+    "dev:http": "tsx src/http.ts",
+    "start": "node dist/server.js",
+    "start:http": "node dist/http.js",
+    "test": "vitest run",
+    "inspect": "npx @mcpjam/inspector@latest"
+  },
+  "keywords": [
+    "mcp",
+    "upb",
+    "upbnet",
+    "exams",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@buho/virtual": "0.1.0",
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^5.0.5"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "buho",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "buhoVirtual",
+    "buhoSistemas",
+    "buhoHelp"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces --if-present",
+    "dev:virtual": "npm run dev -w @buho/virtual",
+    "dev:sistemas": "npm run dev -w @buho/sistemas",
+    "dev:help": "npm run dev -w @buho/help",
+    "inspect": "npx @mcpjam/inspector@latest"
+  }
+}

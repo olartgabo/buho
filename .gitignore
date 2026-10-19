@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+
+# Runtime output, created in whichever directory a server runs from (repo or package root).
+# Anchored so buhoVirtual/src/vault/ (source) is not ignored.
+/downloads/
+/vault/
+/.cache/
+/*/downloads/
+/*/vault/
+/*/.cache/
